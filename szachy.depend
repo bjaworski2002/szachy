@@ -2,3 +2,9 @@
 1578662319 source:c:\users\arkadiusz\documents\projects codeblocks\szachy\main.cpp
 	<iostream>
 
+1578662737 source:c:\users\kubos\documents\projects\codeblock projects\szachy\main.cpp
+	<iostream>
+	<cmath>
+	<fstream>
+	<vector>
+
