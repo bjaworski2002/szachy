@@ -1,6 +1,9 @@
 # depslib dependency file v1.0
-1578662319 source:c:\users\arkadiusz\documents\projects codeblocks\szachy\main.cpp
+1578663264 source:c:\users\arkadiusz\documents\projects codeblocks\szachy\main.cpp
 	<iostream>
+	<cmath>
+	<fstream>
+	<vector>
 
 1578662737 source:c:\users\kubos\documents\projects\codeblock projects\szachy\main.cpp
 	<iostream>

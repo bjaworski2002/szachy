@@ -213,28 +213,36 @@ movestr Symulator(Chessboard& chessboard, Player& playerWhite, Player& playerBla
     ifstream notacja;
     movestr move1;
     notacja.open("partia1.pgn");
-    string output;
+
+
+
+    string output="";
     if (notacja.is_open())
     {
         cout << output;
+
+         cout << "asdasdas" <<endl;
         while (output!="1/2-1/2")
         {
             notacja >> output;
             if(output=="1/2-1/2") break;
-            size_t found = output.find(".");
-//            cout << " poz=" << found << endl;
-            output=output.substr(found+1, (output.length() - found) );
-            cout << output;
-            move1 = getMove(WHITE, chessboard, output);
-            playerWhite.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
-            chessboard.print();
 
-            notacja >> output;
-            cout << " ";
-            cout<<output << endl;
-            move1 = getMove(BLACK, chessboard, output);
-            playerBlack.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
-            chessboard.print();
+                //TODO - poprawic blad
+
+//                size_t found = output.find(".");
+//    //            cout << " poz=" << found << endl;
+//                output=output.substr(found+1, (output.length() - found) );
+//                cout << output;
+//                move1 = getMove(WHITE, chessboard, output);
+//                playerWhite.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
+//                chessboard.print();
+//
+//                notacja >> output;
+//                cout << " ";
+//                cout<<output << endl;
+//                move1 = getMove(BLACK, chessboard, output);
+//                playerBlack.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
+//                chessboard.print();
             //movestr move1;
 
         }
@@ -258,27 +266,34 @@ int main()
     playerWhite.setOpponent(&playerBlack);
     playerBlack.setOpponent(&playerWhite);
     chessboard.print();
-        char cinx1, cinx2;
-        int ciny1, ciny2;
-        Symulator(chessboard, playerWhite, playerBlack);
-        cout << "Zakonczono symulator" << endl;
-    while(true){
-        cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
-        cout << "  ";
-        while(playerWhite.move(chessboard, cinx1, ciny1, cinx2, ciny2)==-1){
-            cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
-        }
-        for(int i=0; i<8; i++){
-            cout << " " <<i;
-        }
-        cout << endl;
-        chessboard.print();
-        cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
-        while(playerBlack.move(chessboard, cinx1, ciny1, cinx2, ciny2)==-1){
-            cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
-        }
-        chessboard.print();
-    }
+    char cinx1, cinx2;
+    int ciny1, ciny2;
+
+
+    Symulator(chessboard, playerWhite, playerBlack);
+
+
+//    cout << "Zakonczono symulator" << endl;
+//    while(true){
+//        cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
+//        cout << "  ";
+//        while(playerWhite.move(chessboard, cinx1, ciny1, cinx2, ciny2)==-1){
+//            cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
+//        }
+//        for(int i=0; i<8; i++){
+//            cout << " " <<i;
+//        }
+//        cout << endl;
+//        chessboard.print();
+//
+//
+//
+//        cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
+//        while(playerBlack.move(chessboard, cinx1, ciny1, cinx2, ciny2)==-1){
+//            cin >> cinx1 >> ciny1 >> cinx2 >> ciny2;
+//        }
+//        chessboard.print();
+//    }
 
 }
 
