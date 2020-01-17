@@ -221,29 +221,36 @@ movestr Symulator(Chessboard& chessboard, Player& playerWhite, Player& playerBla
     {
         cout << output;
 
-         cout << "asdasdas" <<endl;
+//         cout << "asdasdas" <<endl;
         while (output!="1/2-1/2")
         {
             notacja >> output;
-            if(output=="1/2-1/2") break;
+            if(output=="1/2-1/2"){
+
+//                cout << "sdfsfsdfsdf "<< endl;
+                break;
+            }
 
                 //TODO - poprawic blad
 
-//                size_t found = output.find(".");
-//    //            cout << " poz=" << found << endl;
-//                output=output.substr(found+1, (output.length() - found) );
-//                cout << output;
-//                move1 = getMove(WHITE, chessboard, output);
-//                playerWhite.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
-//                chessboard.print();
-//
-//                notacja >> output;
-//                cout << " ";
-//                cout<<output << endl;
-//                move1 = getMove(BLACK, chessboard, output);
-//                playerBlack.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
-//                chessboard.print();
-            //movestr move1;
+                size_t found = output.find(".");
+    //            cout << " poz=" << found << endl;
+                output=output.substr(found+1, (output.length() - found) ); //Plik nie moze miec spacji miedzy kropka a ruchem
+                cout << output << ' ';
+                move1 = getMove(WHITE, chessboard, output);
+                playerWhite.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
+                chessboard.print();
+
+                notacja >> output;
+                if(output=="1/2-1/2"){
+                    break;
+                }
+                cout << " ";
+                cout<<output << endl;
+                move1 = getMove(BLACK, chessboard, output);
+                playerBlack.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
+                chessboard.print();
+//                movestr move1;
 
         }
         notacja.close();
