@@ -1,7 +1,86 @@
 # depslib dependency file v1.0
-1578663264 source:c:\users\arkadiusz\documents\projects codeblocks\szachy\main.cpp
+1578663416 source:c:\users\arkadiusz\documents\projects codeblocks\szachy\main.cpp
 	<iostream>
 	<cmath>
 	<fstream>
 	<vector>
+
+1582292529 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\constans.cpp
+	"Constans.h"
+
+1582292572 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\constans.h
+
+1579268105 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\main.cpp
+	<iostream>
+	<cmath>
+	<fstream>
+	<vector>
+	"Piece.h"
+	"Chessboard.h"
+	"Player.h"
+
+1582292862 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\piece.h
+	"Player.h"
+	"Chessboard.h"
+	"Constans.h"
+
+1582292862 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\player.h
+	"Chessboard.h"
+	"Piece.h"
+
+1582292813 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\chessboard.h
+	"Player.h"
+	"Piece.h"
+	"Field.h"
+	"Constans.h"
+
+1582292683 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\field.h
+	"Piece.h"
+
+1582292649 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\bishop.cpp
+	"Bishop.h"
+	"Constans.h"
+
+1582291467 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\bishop.h
+	"Piece.h"
+	"Player.h"
+
+1582292895 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\chessboard.cpp
+	"Chessboard.h"
+	"Constans.h"
+	<iostream>
+
+1582292728 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\knight.cpp
+	"Knight.h"
+	"Constans.h"
+
+1579266185 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\knight.h
+	"Piece.h"
+	"Player.h"
+
+1582292996 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\pawn.cpp
+	<iostream>
+	"Pawn.h"
+	"Constans.h"
+
+1579266185 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\pawn.h
+	"Piece.h"
+	"Player.h"
+
+1582293018 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\king.cpp
+	<cmath>
+	"King.h"
+	"Constans.h"
+
+1579266185 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\king.h
+	"Piece.h"
+	"Player.h"
+
+1582292693 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\queen.cpp
+	"Queen.h"
+	"Constans.h"
+
+1579266185 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\queen.h
+	"Piece.h"
+	"Player.h"
 
