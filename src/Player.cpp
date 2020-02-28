@@ -1,6 +1,22 @@
 #include "Player.h"
 #include "Constans.h"
+#include "Piece.h"
+#include "King.h"
+#include "Queen.h"
+#include "Bishop.h"
+#include "Knight.h"
+#include "Rook.h"
+#include "Pawn.h"
+#include <iostream>
+using namespace std;
+
 class Piece;
+class King;
+class Queen;
+class Bishop;
+class Knight;
+class Rook;
+class Pawn;
 Player::Player(Color color){
     this->color = color;
     this->isCheck=false;

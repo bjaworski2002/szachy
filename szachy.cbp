@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,30 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Bishop.h" />
+		<Unit filename="include/Chessboard.h" />
+		<Unit filename="include/Constans.h" />
+		<Unit filename="include/Field.h" />
+		<Unit filename="include/King.h" />
+		<Unit filename="include/Knight.h" />
+		<Unit filename="include/Pawn.h" />
+		<Unit filename="include/Piece.h" />
+		<Unit filename="include/Player.h" />
+		<Unit filename="include/Queen.h" />
+		<Unit filename="include/Rook.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Bishop.cpp" />
+		<Unit filename="src/Chessboard.cpp" />
+		<Unit filename="src/Constans.cpp" />
+		<Unit filename="src/Field.cpp" />
+		<Unit filename="src/King.cpp" />
+		<Unit filename="src/Knight.cpp" />
+		<Unit filename="src/Pawn.cpp" />
+		<Unit filename="src/Piece.cpp" />
+		<Unit filename="src/Player.cpp" />
+		<Unit filename="src/Queen.cpp" />
+		<Unit filename="src/Rook.cpp" />
+		<Unit filename="tmp.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
