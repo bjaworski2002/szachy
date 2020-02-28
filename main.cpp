@@ -60,9 +60,9 @@ movestr getMove(Color color, Chessboard& chessboard, string output){
                 cout << "CX2= "<< cx2 << " " << cy2<< endl;
                 if(chessboard.isEmpty(cx2, cy2+(1*isWhite))){
                     cout << "ISEMPTY" << endl;
-                    move1.x1=output.at(0);
+                    move1.x1=output.at(0);                      //'d'
                     move1.y1=output.at(1)-'0'-(2*isWhite);
-                    move1.x2=x2;
+                    move1.x2=x2;                             //'d'
                     move1.y2=y2;
                     cout << move1.x1 << move1.x2 << move1.y1 << move1.y2 << endl;
                 }
@@ -107,12 +107,16 @@ movestr Symulator(Chessboard& chessboard, Player& playerWhite, Player& playerBla
     string output="";
     if (notacja.is_open())
     {
-        cout << output;
+//        cout << output;
 
 //         cout << "asdasdas" <<endl;
         while (output!="1/2-1/2")
         {
             notacja >> output;
+            cout << "Numer ruchu " << output << endl;
+            notacja >> output;
+
+
             if(output=="1/2-1/2"){
 
 //                cout << "sdfsfsdfsdf "<< endl;
@@ -120,13 +124,24 @@ movestr Symulator(Chessboard& chessboard, Player& playerWhite, Player& playerBla
             }
 
                 //TODO - poprawic blad
+//
+//                size_t found = output.find(".");
+//                cout << " poz=" << found << endl;
+//                for (int i=0; i<found; i++){
+//                    cout << output[i];
+//                }
+//                cout << endl;
+//
+//                output=output.substr(found+1, (output.length() - found) ); //Plik nie moze miec spacji miedzy kropka a ruchem
+//                cout << "Output= " << output << ' ';
 
-                size_t found = output.find(".");
-    //            cout << " poz=" << found << endl;
-                output=output.substr(found+1, (output.length() - found) ); //Plik nie moze miec spacji miedzy kropka a ruchem
-                cout << output << ' ';
+
+
+
                 move1 = getMove(WHITE, chessboard, output);
+                cout << "Przed move1" << endl;
                 playerWhite.move(chessboard, move1.x1, move1.y1, move1.x2, move1.y2);
+                cout << "Po move1" << endl;
                 chessboard.print();
 
                 notacja >> output;

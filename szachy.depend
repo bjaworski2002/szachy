@@ -20,7 +20,7 @@
 
 1582893198 c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\include\constans.h
 
-1582893169 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\main.cpp
+1582896231 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\main.cpp
 	<iostream>
 	<cmath>
 	<fstream>
@@ -115,7 +115,7 @@
 	"Field.h"
 	<iostream>
 
-1582892559 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\player.cpp
+1582895548 source:c:\users\arkadiusz\documents\projects codeblocks\szachyplikiosobne\src\player.cpp
 	"Player.h"
 	"Constans.h"
 	"Piece.h"

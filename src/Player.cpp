@@ -102,14 +102,15 @@ int Player::move(Chessboard &chessboard, char cinx1, int ciny1, char cinx2, int 
 
 
     if (chessboard.isEmpty(x1, y1)){
-        cout << "WYBRANE POLE JEST PUSTE";
+        cout << "POLE, Z KTOREGO RUSZAMY JEST PUSTE";
         return -1;
     }
     else if (p2!=NULL and p!=NULL and p2->getColor()==p->getColor()){
-        cout << "NA TYM POLU ZNAJDUJE SIE INNA BIERKA TEGO SAMEGO GRACZA" << endl;
+        cout << "POLE, NA KTORE SIE UDAJEMY JEST JUZ ZAJETE PRZEZ TEGO SAMEGO GRACZA" << endl;
         return -1;
     }
     else if (chessboard.isEmpty(x2, y2)){
+        cout << "Wchodzi" << endl;
         if (p->getColor()!=color){
             cout << "TA BIERKA NALEZY DO DRUGIEGO GRACZA" << endl;
             return -1;
@@ -128,18 +129,20 @@ int Player::move(Chessboard &chessboard, char cinx1, int ciny1, char cinx2, int 
                return -1;
             }
         else{
+
             chessboard.setPiece(x2, y2, p);
             chessboard.setPiece(x1, y1, NULL);
-            if(isAnyOneCheck())
-                setIsCheck(true);   //ktorakolwiek z naszych figur szachuje, a nie jestesmy szachowani
+//            if(isAnyOneCheck())
+//                setIsCheck(true);   //ktorakolwiek z naszych figur szachuje, a nie jestesmy szachowani
+// TO DO: WROCIC DO FUNKCJI
         }
     }
     else if (p2->getColor()!=color){        //zbijanie
-
         if (p->getColor()!=color){
             cout << "TA BIERKA NALEZY DO DRUGIEGO GRACZA" << endl;
             return -1;
         }
+        cout << "Dziala" << endl; // TO DO NA NASTEPNEJ LEKCJI
         if(!(p->islegal(x1, y1, x2, y2)) or !(p->isInChessboard(x1, y1, x2, y2))){
             cout << "RUCH WYKONANY NIEPOPRAWNIE" << endl;
             return -1;
@@ -149,6 +152,7 @@ int Player::move(Chessboard &chessboard, char cinx1, int ciny1, char cinx2, int 
                 return -1;
             }
         else{
+
             chessboard.setPiece(x2, y2, p);
             chessboard.setPiece(x1, y1, NULL);
             p2->setTakenDown(true);
